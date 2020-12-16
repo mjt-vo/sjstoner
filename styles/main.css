@@ -75,7 +75,7 @@ a:hover {
       /* * * */
 
 .nav-item {
-  padding: 15px 0;
+  padding: 15px 0 0;
   border-bottom: 1px solid;
 }
 .nav-item-link {
@@ -85,11 +85,12 @@ a:hover {
 }
 .nav-item-sublinks {
   overflow: hidden;
+  padding-top: 5px;
   height: 0px;
   transition: height .25s;
 }
 .nav-item:hover .nav-item-sublinks {
-  height: 30px;
+  height: 40px;
 }
 .nav-item-sublink {
   display: inline-block;
