@@ -85,7 +85,7 @@ a:hover {
 }
 .nav-item-sublinks {
   overflow: hidden;
-  padding-top: 5px;
+  padding-top: 10px;
   height: 0px;
   transition: height .25s;
 }
