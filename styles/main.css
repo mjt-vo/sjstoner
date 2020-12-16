@@ -1,0 +1,117 @@
+      /* * * * * * */
+      /* variables */
+      /* * * * * * */
+
+:root {
+  --color-main: #000;
+  --color-bg: #fdfbdc;
+  --color-highlight: #00850b;
+  --spacing-xs: 10px;
+  --spacing-s: 20px;
+  --spacing-m: 30px;
+  --spacing-l: 60px;
+  --spacing-xl: 100px;
+}
+
+html {
+  position: relative;
+  height: 100%;
+  font-family: 'Source Serif Pro', serif;
+  color: var(--color-main);
+  background: var(--color-bg);
+  background: linear-gradient(42deg, #fff 0%, #fff 5%, #fdfbdc 100%);
+}
+
+/* reset */
+body, h1, h2, h3, p, blockquote, ul, li, a {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+      /* * * * * */
+      /* layout  */
+      /* * * * * */
+
+body {
+  padding: 10px 25px;
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+}
+
+      /* * * * * * * */
+      /* typography  */
+      /* * * * * * * */
+
+h1, .nav-item-link {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: inherit;
+  color: var(--color-highlight);
+  transition: color .25s;
+}
+a:hover {
+  color: var(--color-main);
+}
+      /* * * */
+      /* nav */
+      /* * * */
+
+.nav-item {
+  padding: 15px 0;
+  border-bottom: 1px solid;
+}
+.nav-item-link {
+  display: inline-block;
+  width: 100%;
+  color: var(--color-highlight);
+}
+.nav-item-sublinks {
+  overflow: hidden;
+  height: 0px;
+  transition: height .25s;
+}
+.nav-item:hover .nav-item-sublinks {
+  height: 30px;
+}
+.nav-item-sublink {
+  display: inline-block;
+  color: var(--color-main);
+}
+.nav-item-sublink:hover {
+  color: var(--color-highlight);
+}
+.nav-item-sublink + .nav-item-sublink {
+  margin-left: 30px;
+}
+
+      /* * * * * * * * * */
+      /* responsiveness  */
+      /* * * * * * * * * */
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  
+}
