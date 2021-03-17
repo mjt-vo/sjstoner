@@ -1,10 +1,10 @@
-<html lang="en" class="home">
+<html lang="en" class="Bai">
 <head>
   <title>Sara Jane Stoner</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles/main.css"/>
   <!-- <script language="javascript" type="text/javascript" src="./scripts/nav.js"></script> -->
 </head>
@@ -30,9 +30,30 @@
     <h1>Sara Jane Stoner</h1>
   </footer>
 
+  <ul class="font-toggles">
+    <li><strong>fonts</strong></li>
+    <li class="font-toggle" data-font="Bai">Bai Jamjuree</li>
+    <li class="font-toggle active" data-font="Barlow">Barlow</li>
+    <li class="font-toggle" data-font="Courier">Courier</li>
+    <li class="font-toggle" data-font="Source">Source Serif</li>
+    <li><a href="https://fonts.google.com" target="_blank">more options</a></li>
+  </ul>
+
   <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', () => {
       // initNav();
+      const fontToggles = document.querySelectorAll('.font-toggle'),
+        htmlElm = document.querySelector('html');
+      for (const fontToggle of fontToggles) {
+        const { font } = fontToggle.dataset; 
+        fontToggle.addEventListener('click', () => {
+          htmlElm.classList = font;
+          for (const i of fontToggles) {
+            i.classList.remove('active')
+          }
+          fontToggle.classList.add('active');
+        });
+      }
     });
   </script>
 </body>

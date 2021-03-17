@@ -16,10 +16,22 @@
 html {
   position: relative;
   height: 100%;
-  font-family: 'Source Serif Pro', serif;
   color: var(--color-main);
   background: var(--color-bg);
   background: linear-gradient(42deg, #fff 0%, #fff 5%, #fdfbdc 100%);
+}
+
+html.Bai {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+html.Barlow {
+  font-family: 'Barlow', sans-serif;
+}
+html.Courier {
+  font-family: 'Courier', monospace;
+}
+html.Source {
+  font-family: 'Source Serif Pro', serif;
 }
 
 /* reset */
@@ -101,6 +113,28 @@ a:hover {
 }
 .nav-item-sublink + .nav-item-sublink {
   margin-left: 30px;
+}
+
+.font-toggles {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 25px;
+  text-align: right;
+  font-family: Courier, monospace;
+}
+.font-toggle, .font-toggle + li {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.font-toggle:hover {
+  color: var(--color-highlight);
+}
+.font-toggle.active {
+  text-decoration: line-through;
+  color: black;
+  cursor: default;
 }
 
       /* * * * * * * * * */
